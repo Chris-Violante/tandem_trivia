@@ -7,9 +7,9 @@ console.log(Questions);
 class App extends Component {
   render() {
     return(
-      <>
-      <h1>TANDEM TRIVIA</h1>
-      </>
+      <div>
+        <header>TANDEM TRIVIA</header>
+      </div>
     )
   }
 }
