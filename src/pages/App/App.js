@@ -1,6 +1,8 @@
-
 import './App.css';
 import React, { Component } from 'react'
+import Questions from '../../components/Questions/Apprentice_TandemFor400_Data.json'
+
+console.log(Questions);
 
 class App extends Component {
   render() {
