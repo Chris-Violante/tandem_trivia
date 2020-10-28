@@ -1,15 +1,17 @@
 import './App.css';
 import React, { Component } from 'react'
-import Questions from '../../components/Questions/Apprentice_TandemFor400_Data.json'
-import NewGameButton from '../../components/Questions/NewGameButton/NewGameButton';
+import QuestionsData from '../../components/QuestionsData/Apprentice_TandemFor400_Data.json'
+import NewGameButton from '../../components/NewGameButton/NewGameButton';
+import Welcome from '../../components/Welcome/Welcome';
 
-console.log(Questions);
+console.log(QuestionsData);
 
 class App extends Component {
   render() {
     return(
-      <div>
-        <header>TANDEM TRIVIA</header>
+      <div className="App">
+        <header className="header-footer">TANDEM TRIVIA</header>
+        <Welcome />
         <NewGameButton />
       </div>
     )
