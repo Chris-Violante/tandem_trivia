@@ -47,7 +47,6 @@ class App extends Component {
             <GamePage 
             question={this.state.question}
             score={this.state.score}
-            getQuestion={this.getQuestion}
             />
           }/>
         </Switch>
