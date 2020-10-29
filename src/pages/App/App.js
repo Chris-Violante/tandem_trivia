@@ -6,10 +6,34 @@ import GamePage from '../GamePage/GamePage'
 import HomePage from '../HomePage/HomePage'
 
 
-
-console.log(QuestionsData);
+console.log(QuestionsData)
 
 class App extends Component {
+  constructor() {
+    super()
+    this.state = {
+      ...this.getInitialState(),
+      score: 0
+    }
+  }
+
+  getInitialState = () => {
+    return {
+      question: this.getQuestion()
+    }
+  }
+
+  getQuestion = () => {
+    return QuestionsData[this.getRandomInt(0, 20)]
+  }
+
+  getRandomInt = (min, max) => {
+  min = Math.ceil(min);
+  max = Math.floor(max);
+  return Math.floor(Math.random() * (max - min + 1) + min); 
+  }
+
+
   render() {
     return(
       <div className="App">
@@ -20,7 +44,11 @@ class App extends Component {
             <HomePage />
           }/>
           <Route exact path='/GamePage' render={({ history }) => 
-            <GamePage />
+            <GamePage 
+            question={this.state.question}
+            score={this.state.score}
+            getQuestion={this.getQuestion}
+            />
           }/>
         </Switch>
         </main>
