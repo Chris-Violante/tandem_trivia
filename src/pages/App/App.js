@@ -52,6 +52,7 @@ class App extends Component {
             <GamePage 
             question={this.state.question}
             score={this.state.score}
+            getRandomInt={this.getRandomInt}
             />
           }/>
         </Switch>

@@ -22,6 +22,7 @@ class GamePage extends Component {
                 <div>
                     <Answers 
                         question={this.props.question}
+                        getRandomInt={this.props.getRandomInt}
                     />
                 </div>
             </div>
