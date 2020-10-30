@@ -14,13 +14,15 @@ class App extends Component {
     super()
     this.state = {
       ...this.getInitialState(),
-      score: 0
+      score: 0,
+      userAnswer: null,
+      qIndex: 1 
     }
   }
 
   getInitialState = () => {
     return {
-      question: this.getQuestion()
+      question: this.getQuestion(),
     }
   }
   
@@ -39,6 +41,13 @@ class App extends Component {
   }
 
 
+  scoreAnswer = () => {
+    
+  }
+
+
+
+
   render() {
     return(
       <div className="App">
@@ -52,6 +61,7 @@ class App extends Component {
             <GamePage 
             question={this.state.question}
             score={this.state.score}
+            userAnswer={this.state.userAnswer}
             />
           }/>
         </Switch>
