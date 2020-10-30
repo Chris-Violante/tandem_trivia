@@ -6,7 +6,7 @@ import GamePage from '../GamePage/GamePage'
 import HomePage from '../HomePage/HomePage'
 
 
-console.log(QuestionsData)
+const questions = QuestionsData
 
 
 class App extends Component {
@@ -26,7 +26,10 @@ class App extends Component {
   
 
   getQuestion = () => {
-    return QuestionsData[this.getRandomInt(0, 20)]
+    let randomNum = this.getRandomInt(0, 20)
+    let question = questions[randomNum]
+    questions.splice(randomNum, 1)
+    return question
   }
 
   getRandomInt = (min, max) => {

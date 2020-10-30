@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import CurrentQuestion from '../../components/CurrentQuestion/CurrentQuestion'
 import Answers from '../../components/Answers/Answers'
+import Score from '../../components/Score/Score'
 
 
 
@@ -9,9 +10,13 @@ class GamePage extends Component {
         return(
             <div>
                 <div>
+                    <Score 
+                        score={this.props.score}
+                    />
+                </div>
+                <div>
                     <CurrentQuestion 
                         question={this.props.question}
-                        score={this.props.score}
                     />
                 </div>
                 <div>
