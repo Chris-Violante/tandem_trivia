@@ -3,7 +3,7 @@ import React from 'react'
 
 const CurrentQuestion = (props) => (
     <div>
-        <p>This is a question</p>     
+        <p>{props.question.question}</p>     
     </div>
 )
 
