@@ -8,6 +8,7 @@ import HomePage from '../HomePage/HomePage'
 
 console.log(QuestionsData)
 
+
 class App extends Component {
   constructor() {
     super()
@@ -22,6 +23,7 @@ class App extends Component {
       question: this.getQuestion()
     }
   }
+  
 
   getQuestion = () => {
     return QuestionsData[this.getRandomInt(0, 20)]
