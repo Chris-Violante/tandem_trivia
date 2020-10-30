@@ -2,12 +2,14 @@ import React, { Component } from 'react';
 import CurrentQuestion from '../../components/CurrentQuestion/CurrentQuestion'
 import Answers from '../../components/Answers/Answers'
 import Score from '../../components/Score/Score'
+import CorrectAnswer from '../../components/CorrectAnswer/CorrectAnswer';
 
 
 
-class GamePage extends Component {
+class GamePage extends Component {    
     render() {
         return(
+            <>
             <div>
                 <div>
                     <Score 
@@ -22,9 +24,13 @@ class GamePage extends Component {
                 <div>
                     <Answers 
                         question={this.props.question}
-                    />
+                        />
+                    <CorrectAnswer 
+                        questions={this.props.question}
+                        />
                 </div>
             </div>
+            </>
         )
     }
 }
