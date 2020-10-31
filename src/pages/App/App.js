@@ -19,6 +19,8 @@ class App extends Component {
       qIndex: 0,
     }
   }
+
+  // generate initial and update state
   
   getInitialState = () => {
     return {
@@ -44,12 +46,15 @@ class App extends Component {
     return question
   }
 
+  // Helper Functions
+  
   getRandomInt = (min, max) => {
   min = Math.ceil(min);
   max = Math.floor(max);
   return Math.floor(Math.random() * (max - min + 1) + min); 
   }
 
+  // Score Each Click
 
   scoreAnswer = (e) => {
     let scoreCopy = this.state.score
@@ -83,8 +88,6 @@ class App extends Component {
       alert(`Game Over.  Final Score ${scoreCopy}`)
     }
   }
-
-
 
 
   render() {
