@@ -64,13 +64,13 @@ class App extends Component {
       this.setState({
         score: scoreCopy += 1
       })
-      alert(`Game Over.  Final Score ${this.state.score}`)
+      alert(`Game Over.  Final Score ${scoreCopy}`)
     }
     else if((e !== this.state.question.correct)&&(this.state.qIndex === 9)) {
       this.setState({
         score: scoreCopy -= 1
       })
-      alert(`Game Over.  Final Score ${this.state.score}`)
+      alert(`Game Over.  Final Score ${scoreCopy}`)
     }
   }
 
