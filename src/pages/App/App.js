@@ -16,19 +16,29 @@ class App extends Component {
       ...this.getInitialState(),
       score: 0,
       userAnswer: null,
-      qIndex: 9 
+      qIndex: 0,
+    }
+  }
+  
+  getInitialState = () => {
+    return {
+      question: this.getInitialQuestion(),
+      
     }
   }
 
-  getInitialState = () => {
-    return {
-      question: this.getQuestion(),
-    }
+  getInitialQuestion = () => {
+    let randomNum = this.getRandomInt(0, 20)
+    let question = questions[randomNum]
+    questions.splice(randomNum, 1)
+    return question
   }
   
 
   getQuestion = () => {
-    let randomNum = this.getRandomInt(0, 20)
+    let qIndexCopy = this.state.qIndex
+    let x = (19 - qIndexCopy)
+    let randomNum = this.getRandomInt(0, x)
     let question = questions[randomNum]
     questions.splice(randomNum, 1)
     return question
