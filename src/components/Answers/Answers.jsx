@@ -8,7 +8,10 @@ class Answers extends Component {
             <>
             {this.props.question.incorrect.map((key, idx) => {
                     return(
-                        <button key={idx}>{this.props.question.incorrect[idx]}</button>
+                        <button 
+                        key={idx}
+                        onClick={(e) => this.props.scoreAnswer(e.target.innerText)}
+                        >{this.props.question.incorrect[idx]}</button>
                         )
             })}
             </>                

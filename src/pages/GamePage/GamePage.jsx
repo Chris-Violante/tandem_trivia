@@ -24,9 +24,11 @@ class GamePage extends Component {
                 <div>
                     <Answers 
                         question={this.props.question}
+                        scoreAnswer={this.props.scoreAnswer}
                         />
                     <CorrectAnswer 
                         questions={this.props.question}
+                        scoreAnswer={this.props.scoreAnswer}
                         />
                 </div>
             </div>

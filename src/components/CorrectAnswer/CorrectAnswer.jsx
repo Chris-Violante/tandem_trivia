@@ -6,7 +6,9 @@ class CorrectAnswer extends Component {
         render() {
             return(
                 <>
-                <button>{this.props.questions.correct}</button>
+                <button
+                onClick={(e) => this.props.scoreAnswer(e.target.innerText)}
+                >{this.props.questions.correct}</button>
                 </>
                
         )

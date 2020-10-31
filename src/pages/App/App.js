@@ -41,8 +41,8 @@ class App extends Component {
   }
 
 
-  scoreAnswer = () => {
-    
+  scoreAnswer = (e) => {
+    console.log(e)
   }
 
 
@@ -62,6 +62,7 @@ class App extends Component {
             question={this.state.question}
             score={this.state.score}
             userAnswer={this.state.userAnswer}
+            scoreAnswer={this.scoreAnswer}
             />
           }/>
         </Switch>
