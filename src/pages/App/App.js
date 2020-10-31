@@ -16,7 +16,7 @@ class App extends Component {
       ...this.getInitialState(),
       score: 0,
       userAnswer: null,
-      qIndex: 1 
+      qIndex: 9 
     }
   }
 
@@ -42,7 +42,36 @@ class App extends Component {
 
 
   scoreAnswer = (e) => {
+    let scoreCopy = this.state.score
+    let qIndexCopy = this.state.qIndex
     console.log(e)
+    console.log(this.state.question)
+    if((e === this.state.question.correct)&&(this.state.qIndex < 9)){
+      this.setState({
+        score: scoreCopy += 1,
+        qIndex: qIndexCopy += 1,
+        question: this.getQuestion()
+      })
+    }
+    else if((e !== this.state.question.correct)&&(this.state.qIndex < 9)) {
+      this.setState({
+        score: scoreCopy -= 1,
+        qIndex: qIndexCopy += 1,
+        question: this.getQuestion()
+      })
+    }
+    else if((e === this.state.question.correct)&&(this.state.qIndex === 9)) {
+      this.setState({
+        score: scoreCopy += 1
+      })
+      alert(`Game Over.  Final Score ${this.state.score}`)
+    }
+    else if((e !== this.state.question.correct)&&(this.state.qIndex === 9)) {
+      this.setState({
+        score: scoreCopy -= 1
+      })
+      alert(`Game Over.  Final Score ${this.state.score}`)
+    }
   }
 
 
