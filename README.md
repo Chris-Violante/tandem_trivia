@@ -1,70 +1,44 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Tandem Trivia
 
-## Available Scripts
+### What is Tandem Trivia? 
+Tandem Trivia is a quick to play, fun game that was built using the 2020 Tandem Internship code challengeguidelines.  There are A LOT of trivia application tutorials on the internet as it is one of the relatively more basic things someone new to coding can build and have fun with.  For this application I made a firm point to not use any code, any concepts, or even consult any of these walk throughs while building this game.  All of the algorithms for question selection, question scoring, and gameplay were of my own design.  This doesn't mean Tandem Trivia is the best trivia game out there, it means quite the opposite.  The game is not perfect but the game did come from my own mind and I believe shows some of what I am capable of at this point in time.  
 
-In the project directory, you can run:
 
-### `npm start`
+### Design
+The design of the game was done by hand, the old fashioned way.  While I sometimes use boards like trello, draw.io, or programs like Marvel to organize and prototype applications, with this program I used my personal favorite way, pen and paper.  Below is several images from my design notebook that shows how the game was designed. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+![User Stories](https://imgur.com/j4Qu5Iv.jpg)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![WireFrame 1](https://imgur.com/FfDYukh.jpg)
 
-### `npm test`
+![WireFrame 2](https://imgur.com/ZNOV9tk.jpg)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### Technologies Used
+- React.JS
+- Node.JS
+- HTML
+- CSS (BootStrap)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Getting Started
+To run Tandem Trivia please follow the following steps:
+- Clone repository to your computer
+- Open in your favorite text editor (I use VS Code or Subliime)
+- Install the node modules with 'NPM Install'
+- (If necessary) run 'NPM Audit Fix' command
+- Start the application with the command 'NPM Start'
+- Enjoy! 
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Next Steps
+Tandem Trivia is a very imperfect application because of the time crunch it was built under.  With more time I am going to work on completing the following upgrades: 
+- Improve Styling
+- Get rid of Alert at end of game and push user to a seperate game end page
+- Add a timer to the game
+- Add power-up features to the game such as 50/50 or Skip a question while still getting a point
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+### Dependencies
+webpack >= v2.0.0
